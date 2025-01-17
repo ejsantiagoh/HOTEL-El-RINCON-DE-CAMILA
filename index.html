@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel - El Rincón de Camila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-[#f7f2ed] p-7">
+    <div class="w-full py-2 px-2 rounded-3xl flex-column justify-center">
+      <!-- Header centrado, flotante, y con un ancho limitado (mitad de la pantalla) -->
+      <header
+        class="bg-white fixed w-1/2 top-0 left-1/2 transform -translate-x-1/2 z-10 shadow-lg rounded-3xl m-2"
+      >
+        <div class="px-4 py-4">
+          <nav class="flex justify-center space-x-6">
+            <a
+              href="./index.html"
+              class="text-gray-800 font-semibold hover:text-gray-600"
+              >Hotel - EL RINCON DE CAMILA</a
+            >
+            <a href="./index.html" class="text-gray-800 hover:text-gray-600"
+              >Home</a
+            >
+            <a href="./galeria.html" class="text-gray-800 hover:text-gray-600"
+              >Galería</a
+            >
+            <a href="./contacto.html" class="text-gray-800 hover:text-gray-600"
+              >Contacto</a
+            >
+            <div class="bg-[#11ccc7] rounded-3xl h-15 w-15">
+              <a
+                href="./login/login.html"
+                class="text-[#11ccc7]-800 hover:text-gray-600 p-3"
+                >¡Registrarse!</a
+              >
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <section class="text-center">
+        <img
+          class="object-cover w-full h-64 mx-auto"
+          src="./img/1-ona-mar-menor-golf-resort-6.webp"
+          alt="Imagen del hotel"
+        />
+        <h1 class="text-2xl font-semibold mb-6 text-center text-gray-700 ">
+          Tu hotel en Bucaramanga (Santander)
+        </h1>
+      </section>
+
+      <!-- Sección Galería -->
+      <section class="mb-4">
+        <div class="relative max-w-2xl mx-auto mt-10">
+          <div id="carousel" class="overflow-hidden relative rounded-lg">
+            <div
+              class="flex transition-transform duration-500 ease-in-out"
+              id="carousel-images"
+            >
+              <div class="min-w-full">
+                <img
+                  src="./img/2459-ona-mar-menor-golf-resort-spa-11.webp"
+                  alt="Imagen 1"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div class="min-w-full">
+                <img
+                  src="./img/2462-ona-mar-menor-resort-spa-3.webp"
+                  alt="Imagen 2"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div class="min-w-full">
+                <img
+                  src="./img/2472-ona-mar-menor-golf-resort-deluxe-vistas-4.webp"
+                  alt="Imagen 3"
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+            <button
+              id="prev"
+              class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-white p-3 rounded-full focus:outline-none shadow-md"
+            >
+              <img
+                class="h-7 w-7 rotate-180 text-white"
+                src="./img/flecha-correcta.png"
+                alt="flecha-izquierda"
+              />
+            </button>
+            <button
+              id="next"
+              class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-white p-3 rounded-full focus:outline-none shadow-md"
+            >
+              <img
+                class="h-7 w-7 text-white"
+                src="./img/flecha-correcta.png"
+                alt="flecha-derecha"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Botón de WhatsApp -->
+      <a
+        href="https://wa.me/1234567890"
+        target="_blank"
+        class="fixed bottom-4 left-4 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300"
+      >
+        <img
+          class="h-10 w-10"
+          src="./img/whatsapp.png"
+          alt="Ícono de WhatsApp"
+        />
+      </a>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
