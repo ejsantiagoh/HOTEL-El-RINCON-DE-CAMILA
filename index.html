@@ -9,22 +9,25 @@
 
   <body class="bg-[#f7f2ed] p-7">
     <div class="w-full py-2 px-2 rounded-3xl flex-column justify-center">
-      <!-- Header centrado, flotante, y con un ancho limitado (mitad de la pantalla) -->
+
       <header
-        class="bg-white fixed w-1/2 top-0 left-1/2 transform -translate-x-1/2 z-10 shadow-lg rounded-3xl m-2"
+        class="bg-white fixed w-2/3 top-0 left-1/2 transform -translate-x-1/2 z-10 shadow-lg rounded-3xl m-2"
       >
         <div class="px-4 py-4">
           <nav class="flex justify-center space-x-6">
             <a
               href="./index.html"
               class="text-gray-800 font-semibold hover:text-gray-600"
-              >Hotel - EL RINCON DE CAMILA</a
+              >Hotel - EL RINCÓN DE CAMILA</a
             >
             <a href="./index.html" class="text-gray-800 hover:text-gray-600"
               >Home</a
             >
             <a href="./galeria.html" class="text-gray-800 hover:text-gray-600"
               >Galería</a
+            >
+            <a href="./habitaciones.html" class="text-gray-800 hover:text-gray-600"
+              >Habitaciones</a
             >
             <a href="./contacto.html" class="text-gray-800 hover:text-gray-600"
               >Contacto</a
@@ -33,7 +36,7 @@
               <a
                 href="./login/login.html"
                 class="text-[#11ccc7]-800 hover:text-gray-600 p-3"
-                >¡Registrarse!</a
+                >¡Inicio de sesión!</a
               >
             </div>
           </nav>
@@ -51,13 +54,13 @@
         </h1>
       </section>
 
-      <!-- Sección Galería -->
-      <section class="mb-4">
-        <div class="relative max-w-2xl mx-auto mt-10">
-          <div id="carousel" class="overflow-hidden relative rounded-lg">
-            <div
+      <section class="mb-4 flex justify-center">
+        <div class="relative max-w-lg mx-auto mt-10 rounded-6xl">
+          <div id="carousel" class=" relative ">
+            <div class="overflow-hidden rounded-xl">
+               <div
               class="flex transition-transform duration-500 ease-in-out"
-              id="carousel-images"
+              id="carousel-images0"
             >
               <div class="min-w-full">
                 <img
@@ -80,28 +83,65 @@
                   class="w-full h-auto"
                 />
               </div>
+              <div class="min-w-full">
+                <img
+                  src="./img/2447-ona-mar-menor-golf-resort-spa-12.webp"
+                  alt="Imagen 3"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div class="min-w-full">
+                <img
+                  src="./img/2448-ona-mar-menor-golf-resort-spa-1.webp"
+                  alt="Imagen 3"
+                  class="w-full h-auto"
+                />
+              </div>
+                <div class="min-w-full">
+                <img
+                  src="./img/2473-ona-mar-menor-golf-resort-deluxe-vistas-5.webp"
+                  alt="Imagen 3"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div class="min-w-full">
+                <img
+                  src="./img/2475-ona-mar-menor-golf-resort-suite-junior-1.webp"
+                  alt="Imagen 3"
+                  class="w-full h-auto"
+                />
+              </div>
             </div>
+            </div>
+           
             <button
-              id="prev"
-              class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-white p-3 rounded-full focus:outline-none shadow-md"
+              id="prev-index"
+              class="absolute top-1/2 left-[-30px] transform -translate-y-1/2 bg-white text-white p-3 rounded-full focus:outline-none shadow-md"
             >
               <img
-                class="h-7 w-7 rotate-180 text-white"
+                class="h-5 w-5 rotate-180 text-white"
                 src="./img/flecha-correcta.png"
                 alt="flecha-izquierda"
               />
             </button>
             <button
-              id="next"
-              class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-white p-3 rounded-full focus:outline-none shadow-md"
+              id="next-index"
+              class="absolute top-1/2 right-[-30px] transform -translate-y-1/2 bg-white text-white p-3 rounded-full focus:outline-none shadow-md"
             >
               <img
-                class="h-7 w-7 text-white"
+                class="h-5 w-5 text-white"
                 src="./img/flecha-correcta.png"
                 alt="flecha-derecha"
               />
             </button>
           </div>
+        </div>
+        <div class="relative max-w-xl mx-auto mt-10 bg-white rounded-lg">
+          <h1 class="text-[#042937]  text-3xl p-3 m-3  text-center text-gray-800 font-semibold">Hotel 5 estrellas en Bucaramanga</h1>
+          <h2 class="text-[#11ccc7] font-semibold text-center ">TUS VACACIONES EN SANTANDER</h2>
+          <p class="text-[#33a9d7] font-semibold p-3 m-2">
+            Si estás buscando unas vacaciones inolvidables en un entorno paradisíaco, las encontrarás en el Hotel - El Rincón de Camila, un hotel de 5 estrellas en Bucaramanga, Santander, que te ofrece una experiencia excepcional y todas las comodidades que esperas de un resort de lujo. Hotel - El Rincón de Camila es el lugar ideal para disfrutar de unas vacaciones de lujo en la hermosa región de Santander. Con servicios de primera clase, comodidades de un hotel 5 estrellas y su ubicación cerca de la playa y de la Manga del Mar Menor, este hotel en Bucaramanga te ofrece todo lo que necesitas para una estancia inolvidable.
+          </p>
         </div>
       </section>
 
@@ -119,5 +159,5 @@
       </a>
     </div>
   </body>
-  <script src="./index.js"></script>
+  <script src="./carrusel.js"></script>
 </html>

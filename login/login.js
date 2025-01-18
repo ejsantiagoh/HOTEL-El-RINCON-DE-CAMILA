@@ -7,8 +7,8 @@ document
 
     const usuario = document.getElementById("usuario").value;
     const password = document.getElementById("password").value;
-    // const telefono = document.getElementById("telefono").value;
-
+    
+    
     // Enviar los datos al servidor
     fetch("http://localhost:3000/usuarios", {
       method: "POST",
