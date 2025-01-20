@@ -1,24 +1,45 @@
 {
   "usuarios": [
     {
-      "id": "97e8",
-      "usuario": "dsvsagsgs",
-      "password": "fsdf"
-    },
-    {
-      "id": "bad8",
-      "usuario": "efa",
+      "id": "97d4",
+      "usuario": "eimer",
       "password": "1234"
+    }
+  ],
+  "habitaciones": [
+    {
+      "id": "1",
+      "nombre": "Habitación Deluxe",
+      "total": 10,
+      "disponibles": 10
     },
     {
-      "id": "58af",
-      "usuario": "eimerrrr",
-      "password": "234"
+      "id": "2",
+      "nombre": "Habitación Standard",
+      "total": 5,
+      "disponibles": 5
     },
     {
-      "id": "6db4",
-      "usuario": "feag",
-      "password": "dss"
+      "id": "3",
+      "nombre": "Habitación Suite",
+      "total": 3,
+      "disponibles": 3
+    }
+  ],
+  "reservas": [
+    {
+      "id": "87e5",
+      "habitacionId": 1,
+      "fechaInicio": "2025-01-20",
+      "fechaFin": "2025-01-21",
+      "usuarioId": "eimer"
+    },
+    {
+      "id": "6538",
+      "habitacionId": 1,
+      "fechaInicio": "2025-01-20",
+      "fechaFin": "2025-01-21",
+      "usuarioId": "eimer"
     }
   ]
 }

@@ -3,26 +3,40 @@
 // console.log(JSON.parse(sesiones));
 
 // Esta función se llama cuando un usuario intenta iniciar sesión
-export function localSesioness(usu, password) {
-  // Obtener el listado de usuarios almacenados en localStorage
+export function agregarUsuario(usuario, password) {
   let sesiones = window.localStorage.getItem("usuarios");
-  
-  // Si no hay usuarios guardados, retornar un mensaje de error
+
+  if (!sesiones) {
+    sesiones = []; // Si no hay usuarios almacenados, crear un array vacío
+  } else {
+    sesiones = JSON.parse(sesiones); // Si ya existen, parsearlos
+  }
+
+  // Agregar el nuevo usuario
+  sesiones.push({ usuario, password });
+
+  // Guardar el array actualizado en localStorage
+  window.localStorage.setItem("usuarios", JSON.stringify(sesiones));
+  console.log("Usuario registrado correctamente.");
+}
+
+export function localSesioness(usu, password) {
+  let sesiones = window.localStorage.getItem("usuarios");
+
   if (!sesiones) {
     console.log("No hay usuarios almacenados.");
-    agregarUsuario(usu, password);
     return false;
   }
 
-  // Parsear el JSON para convertirlo en un array de objetos
   let usuarios = JSON.parse(sesiones);
 
-  // Buscar el usuario que coincide con el nombre de usuario y contraseña proporcionados
-  const usuarioEncontrado = usuarios.find(usuario => usuario.username === usu && usuario.password === password);
+  const usuarioEncontrado = usuarios.find(
+    (usuario) => usuario.usuario === usu && usuario.password === password
+  );
 
-  // Si el usuario es encontrado, la sesión es válida
   if (usuarioEncontrado) {
     console.log("Sesión válida.");
+    window.localStorage.setItem("usuarioLogueado", usu);
     return true;
   } else {
     console.log("Credenciales incorrectas.");
@@ -30,29 +44,24 @@ export function localSesioness(usu, password) {
   }
 }
 
-// Para almacenar un usuario en localStorage (se puede usar esto cuando crees nuevos usuarios)
-export function agregarUsuario(usuario, password) {
-  let sesiones = window.localStorage.getItem("usuarios");
+export function verificarSesion() {
+  const usuarioLogueado = window.localStorage.getItem("usuarioLogueado");
 
-  // Si no hay usuarios, crear un array vacío
-  if (!sesiones) {
-    sesiones = [];
+  // Si hay un usuario logueado, podemos quedarnos en la misma página o redirigir al index
+  if (usuarioLogueado) {
+    console.log("Usuario logueado:", usuarioLogueado);
+    // Si está logueado, podemos dejarlo en el index o redirigir a otra página
+    window.location.href = "./index.html";  // Redirigir a la página principal o a otra
   } else {
-    sesiones = JSON.parse(sesiones);
+    console.log("No hay usuario logueado.");
+    // No hacemos nada, ya que no hay sesión
   }
-
-  // Agregar el nuevo usuario
-  sesiones.push({ usuario, password });
-
-  // Guardar los usuarios nuevamente en localStorage
-  window.localStorage.setItem("usuarios", JSON.stringify(sesiones));
-
-  console.log("Usuario agregado correctamente.");
 }
 
-export function cerrarSesion(usuario,password){
-    let sesiones = window.localStorage.getItem("usuarios");
-    if(sesiones){
+export function cerrarSesion() {
+  // Eliminar la sesión del usuario en localStorage
+  window.localStorage.removeItem("usuarioLogueado");
 
-    }
+  // Redirigir al index
+  window.location.href = "./index.html"; // Redirigir a la página principal después de cerrar sesión
 }

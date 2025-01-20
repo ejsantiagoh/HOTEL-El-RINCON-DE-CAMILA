@@ -7,44 +7,146 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#f7f2ed] p-7">
-            <header
-        class="bg-white fixed w-1/2 top-0 left-1/2 transform -translate-x-1/2 z-10 shadow-lg rounded-3xl m-2"
+<header
+        class="bg-white fixed w-2/2 top-0 right-14 z-10 shadow-lg rounded-full m-2"
       >
         <div class="px-4 py-4">
-          <nav class="flex justify-center space-x-6">
+          <nav class="flex justify-between items-center">
             <a
               href="./index.html"
-              class="text-gray-800 font-semibold hover:text-gray-600"
-              >Hotel - EL RINCON DE CAMILA</a
+              class="text-gray-800 font-semibold hover:text-gray-600 text-lg sm:text-xl"
             >
-            <a href="./index.html" class="text-gray-800 hover:text-gray-600"
-              >Home</a
+              Hotel - EL RINCÓN DE CAMILA
+            </a>
+            <div class="block lg:hidden">
+              <button id="menuToggle" class="text-gray-800">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            
+            <div
+              id="menu"
+              class="lg:flex lg:space-x-6 hidden flex-col lg:flex-row absolute lg:static top-16 left-0 right-0 bg-white lg:bg-transparent shadow-md lg:shadow-none"
             >
-            <a href="./galeria.html" class="text-gray-800 hover:text-gray-600"
-              >Galería</a
-            >
-            <a href="./habitaciones.html" class="text-gray-800 hover:text-gray-600"
-              >Habitaciones</a
-            >
-            <a href="./contacto.html" class="text-gray-800 hover:text-gray-600"
-              >Contacto</a
-            >
-            <div class="bg-[#11ccc7] rounded-3xl h-15 w-15">
-              <a
-                href="./reservas.html"
-                class="text-[#11ccc7]-800 hover:text-gray-600 p-3"
-                >¡Inicio de sesión!</a
+              <ul
+                class="space-y-4 lg:space-y-0 lg:flex lg:space-x-6 w-full lg:w-auto"
               >
+                <li>
+                  <a
+                    href="./index.html"
+                    class="text-gray-800 hover:text-gray-600 block px-4 py-2 text-center"
+                    >Inicio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./galeria.html"
+                    class="text-gray-800 hover:text-gray-600 block px-4 py-2 text-center"
+                    >Galería</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./habitaciones.html"
+                    class="text-gray-800 hover:text-gray-600 block px-4 py-2 text-center"
+                    >Habitaciones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contacto.html"
+                    class="text-gray-800 hover:text-gray-600 block px-4 py-2 text-center"
+                    >Contacto</a
+                  >
+                </li>
+                <li class="flex justify-center">
+                  <div
+                    class="bg-[#11ccc7] rounded-3xl h-12 w-32 flex items-center justify-center"
+                  >
+                    <a
+                      id="loginButton"
+                      href="./login/login.html"
+                      class="text-white font-semibold"
+                      >¡Iniciar sesión!</a
+                    >
+                  </div>
+                </li>
+                <li class="flex justify-center">
+                  <div
+                    class="bg-[#f6ad55] rounded-3xl h-12 w-32 flex items-center justify-center"
+                    id="registerButtonWrapper"
+                  >
+                    <a
+                      id="registerButton"
+                      href="./login/registro.html"
+                      class="text-white font-semibold"
+                      >¡Regístrate!</a
+                    >
+                  </div>
+                </li>
+              </ul>
             </div>
           </nav>
         </div>
       </header>
 
+     <section class="mb-4 flex justify-center m-1 p-5" id="ubicación">
 
-    <!-- Botón de WhatsApp -->
+    <div class="relative max-w-xl mx-auto mt-10 bg-white rounded-lg">
+
+      <h1 class="text-[#042937]  text-3xl p-3 m-3  text-center text-gray-800 font-semibold">Contactos</h1>
+      
+      <p class="text-[#33a9d7] font-semibold p-3 m-2">
+        Ubicación del Hotel - El RINCON de Camila
+      </p>
+      <p class=" font-semibold p-3 m-2">
+        Ceiba, s/n 30700 - Bucaramanga - Santander
+      </p>
+      <p class="text-[#33a9d7] font-semibold p-3 m-2">
+        Contacto
+      </p>
+      <p class=" font-semibold p-3 m-2">
+        T. +34 960 130 982 
+      </p>
+      <p class=" font-semibold p-3 m-2">
+        Reservas
+        recepcion.hotelelrincon@camila.com
+      </p>
+    </div>
+    <div class="relative max-w-lg mx-auto mt-10 rounded-6xl">
+      <h1>Ubicación del Hotel - El Rincón de Camila</h1>
+      <p>Encuentra nuestra ubicación en Google Maps:</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5559336837164!2d-73.1259666!3d7.061346899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fc2d64e4c7d%3A0x2264177758738113!2sCampuslands!5e0!3m2!1ses!2sco!4v1737339787745!5m2!1ses!2sco" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+    </div>
+
+  </section>
+
   <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-4 left-4 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
     <img class="h-10 w-10"  src="./img/whatsapp.png" alt="Ícono de WhatsApp">
   </a>
 </body>
-<script src=""></script>
+  <script type="module" src="./index.js"></script>
 </html>

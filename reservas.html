@@ -5,49 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotel - El Rincón de Camila</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body class="bg-[#f7f2ed] p-7">
-
-            <header
-        class="bg-white fixed w-1/2 top-0 left-1/2 transform -translate-x-1/2 z-10 shadow-lg rounded-3xl m-2"
+<header
+        class="bg-white fixed w-2/2 top-0 right-14 z-10 shadow-lg rounded-full m-2"
       >
         <div class="px-4 py-4">
-          <nav class="flex justify-center space-x-6">
+          <nav class="flex justify-between items-center">
             <a
               href="./index.html"
-              class="text-gray-800 font-semibold hover:text-gray-600"
-              >Hotel - EL RINCON DE CAMILA</a
+              class="text-gray-800 font-semibold hover:text-gray-600 text-lg sm:text-xl"
             >
-            <a href="./index.html" class="text-gray-800 hover:text-gray-600"
-              >Home</a
+              Hotel - EL RINCÓN DE CAMILA
+            </a>
+            <div class="block lg:hidden">
+              <button id="menuToggle" class="text-gray-800">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            
+            <div
+              id="menu"
+              class="lg:flex lg:space-x-6 hidden flex-col lg:flex-row absolute lg:static top-16 left-0 right-0 bg-white lg:bg-transparent shadow-md lg:shadow-none"
             >
-            <a href="./galeria.html" class="text-gray-800 hover:text-gray-600"
-              >Galería</a
-            >
-            <a href="./habitaciones.html" class="text-gray-800 hover:text-gray-600"
-              >Habitaciones</a
-            >
-            <a href="./contacto.html" class="text-gray-800 hover:text-gray-600"
-              >Contacto</a
-            >
-            <div class="bg-[#11ccc7] rounded-3xl h-15 w-15">
-              <a
-                href="./reservas.html"
-                class="text-[#11ccc7]-800 hover:text-gray-600 p-3"
-                >¡Inicio de sesión!</a
+              <ul
+                class="space-y-4 lg:space-y-0 lg:flex lg:space-x-6 w-full lg:w-auto"
               >
+                <li>
+                  <a
+                    href="./index.html"
+                    class="text-gray-800 hover:text-gray-600 block px-4 py-2 text-center"
+                    >Inicio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./galeria.html"
+                    class="text-gray-800 hover:text-gray-600 block px-4 py-2 text-center"
+                    >Galería</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./habitaciones.html"
+                    class="text-gray-800 hover:text-gray-600 block px-4 py-2 text-center"
+                    >Habitaciones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contacto.html"
+                    class="text-gray-800 hover:text-gray-600 block px-4 py-2 text-center"
+                    >Contacto</a
+                  >
+                </li>
+                <li class="flex justify-center">
+                  <div
+                    class="bg-[#11ccc7] rounded-3xl h-12 w-32 flex items-center justify-center"
+                  >
+                    <a
+                      id="loginButton"
+                      href="./login/login.html"
+                      class="text-white font-semibold"
+                      >¡Iniciar sesión!</a
+                    >
+                  </div>
+                </li>
+                <li class="flex justify-center">
+                  <div
+                    class="bg-[#f6ad55] rounded-3xl h-12 w-32 flex items-center justify-center"
+                    id="registerButtonWrapper"
+                  >
+                    <a
+                      id="registerButton"
+                      href="./login/registro.html"
+                      class="text-white font-semibold"
+                      >¡Regístrate!</a
+                    >
+                  </div>
+                </li>
+              </ul>
             </div>
           </nav>
         </div>
       </header>
 
+  <section class="mb-4 flex justify-center m-1" id="habitacion1">
+    <div class="relative max-w-sm mx-auto mt-10 rounded-6xl">
+      <div class="carousel relative ">
+        <div class="overflow-hidden rounded-xl">
+          <div class="flex transition-transform duration-500 ease-in-out" id="carousel-images1">
+            <div class="min-w-full">
+              <img src="./img-habitaciones/2469-ona-mar-menor-golf-resort-deluxe-vistas-2.webp" alt="Imagen 1"
+                class="w-full h-auto" />
+            </div>
+            <div class="min-w-full">
+              <img src="./img-habitaciones/2470-ona-mar-menor-golf-resort-deluxe-vistas-1.webp" alt="Imagen 2"
+                class="w-full h-auto" />
+            </div>
+            <div class="min-w-full">
+              <img src="./img-habitaciones/2471-ona-mar-menor-golf-resort-deluxe-vistas-3.webp" alt="Imagen 3"
+                class="w-full h-auto" />
+            </div>
+            <div class="min-w-full">
+              <img src="./img-habitaciones/2472-ona-mar-menor-golf-resort-deluxe-vistas-4.webp" alt="Imagen 3"
+                class="w-full h-auto" />
+            </div>
+            <div class="min-w-full">
+              <img src="./img-habitaciones/2473-ona-mar-menor-golf-resort-deluxe-vistas-5.webp" alt="Imagen 3"
+                class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+
+        <button id="prev-habitacion1"
+          class="absolute top-1/4 left-[-30px] transform -translate-y-1/2 bg-white text-white p-3 rounded-full focus:outline-none shadow-md">
+          <img class="h-5 w-5 rotate-180 text-white" src="./img/flecha-correcta.png" alt="flecha-izquierda" />
+        </button>
+        <button id="next-habitacion1"
+          class="absolute top-1/4 right-[-30px] transform -translate-y-1/2 bg-white text-white p-3 rounded-full focus:outline-none shadow-md">
+          <img class="h-5 w-5 text-white" src="./img/flecha-correcta.png" alt="flecha-derecha" />
+        </button>
+
+        <div class="relative max-w-xl mx-auto mt-10 bg-white rounded-lg">
+          <button id="disponibilidad"
+          class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white p-3 rounded-full focus:outline-none shadow-md">
+          Disponibilidad
+          </button>
+          <button id="reservar"
+          class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white p-3 rounded-full focus:outline-none shadow-md">
+          Reservar
+          </button>
+
+        <p class="absolute top-14  bg-white p-4 m-2">
+          <strong>Nota: </strong>La hora de check in a las habitaciones será a las 14:00 del día. Si el usuario no hace efectiva la reserva dos horas después de que inicie el check in (16:00) la habitación quedará disponible para que otra persona la pueda tomar. 
+         </p>
+         <div id="habitaciones-lista"></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="relative max-w-xl mx-auto mt-10 bg-white rounded-lg">
+       <h1 class="text-[#042937]  text-2xl p-1 m-1 text-gray-800 font-semibold">Seleccionar tarifa</h1>
+      <h1 class="text-[#042937]  text-3xl p-2 m-2  text-center text-gray-800 font-semibold">Habitación Deluxe</h1>
+      
+      <p class=" p-3 m-2">
+        Habitación espaciosa con vistas al campo de golf.
+Cuenta con bañera de hidromasaje, baño privado con bañera, ducha, secador de pelo, artículos de aseo gratuitos y albornoces.
+      </p>
+      <p class=" p-3 m-2">
+        1 Cama doble grande o 2 Camas individuales
+      </p>
+      <p class=" p-3 m-2">
+        <strong>Tamaño:</strong> 34 m²
+      </p>
+      <p class=" p-3 m-2">
+        <strong>Capacidad:</strong> 2 personas
+      </p>
+      <p class=" p-1 m-2"><strong>Servicios:</strong></p>
+      <p class="p-1 m-1  ">
+        TV - Canales vía satélite
+      </p>
+      <p class="p-1 m-1">Hervidor eléctrico</p>
+      <p class="p-1 m-1">Ventilador</p>
+      <p class="p-1 m-1">Toallas</p>
+      <p class="p-1 m-1">Zona de estar</p>
+      <p class="p-1 m-1">Aire acondicionado</p>
+      <p class="p-1 m-1">Calefacción</p>
+      <p class="p-1 m-1">Bañera de hidromasaje</p>
+      <p class="p-1 m-1">Terraza</p>
+      <p class="p-1 m-1">WIFI (gratis)</p>
+    </div>
+    
+
+  </section>
+  
+
+
+
   </div>
-        <!-- Botón de WhatsApp -->
   <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-4 left-4 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
     <img class="h-10 w-10"  src="./img/whatsapp.png" alt="Ícono de WhatsApp">
   </a>
 
 
 </body>
+<script src="./carrusel.js"></script>
+<script src="./reservas.js"></script>
+<script type="module" src="./index.js"></script>
 </html>
 
